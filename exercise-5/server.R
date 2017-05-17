@@ -16,7 +16,7 @@ dataset <- womensrole
 shinyServer(function(input, output) {
    
   #plotNameHere will become what you named your plot in the UI
-  output$plotNamehere <- renderPlot({
+  output$plotWomensRole <- renderPlot({
     
     #Here use your different input values to define what data is used to render your plot
     #The x axis will be the level of education

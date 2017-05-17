@@ -36,7 +36,7 @@ shinyUI(fluidPage(
     # Show a plot of the generated distribution
     mainPanel(
       #give your plot a descriptive name
-       plotOutput("plotEducation")
+       plotOutput("plotWomensRole")
     )
   )
 ))
