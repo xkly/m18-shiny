@@ -7,30 +7,36 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Add a descriptive application title
-  titlePanel("Add Title Here"),
+  titlePanel("Women and Education"),
   
   # Here you will add the interactivity to your app
-  # Create a selectInput where the user can select either Men, Women, or Both. 
+  # Create a selectInput where the user can select either Men, Women, or Both.
   # Create a selectInput where the user can select if they Agree or Disagree.
-
+  
   # Look at the Shiny documentation for selectInput and sliderInput syntax
   # inputIDs's have been provided
   sidebarLayout(
     sidebarPanel(
       #selectInput for Men, Women, or Both
       #inputID = sex
-      
+      selectInput(inputId = "sex", 
+                  label = "Men, Women, or Both", 
+                  choices = c("Men", "Women", "Both"),
+                  selected = "Both"),
       
       #selectInput for Agree or Disagree
       #inputID = thoughts
-      
+      selectInput(inputId = "thoughts",
+                  label = "Select if agree or disagree",
+                  choices = c("Agree", "Disagree"),
+                  selected = "Agree")
       
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
       #give your plot a descriptive name
-       plotOutput("plotNamehere")
+       plotOutput("plotEducation")
     )
   )
 ))
